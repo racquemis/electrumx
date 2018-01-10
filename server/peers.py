@@ -98,9 +98,9 @@ class PeerSession(JSONSession):
             elif self.peer.host.lower() in hosts:
                 self.peer.update_features(features)
             else:
-                self.bad = True
-                self.log_warning('ignoring - not listed in host list {}'
-                                 .format(hosts))
+                self.bad = False
+                #self.log_warning('ignoring - not listed in host list {}'
+                #                 .format(hosts))
         self.close_if_done()
 
     def on_height(self, result, error):
