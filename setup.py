@@ -1,3 +1,10 @@
+# Before running setup make sure you executed the following instruction in terminal
+# sudo apt-get install libleveldb-dev
+# sudo add-apt-repository ppa:jonathonf/python-3.6
+# sudo apt-get update
+# sudo apt-get install python3.6
+# sudo apt-get install pip3
+
 import setuptools
 from server.version import VERSION
 
