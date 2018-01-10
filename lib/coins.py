@@ -1280,4 +1280,5 @@ class Minexcoin(MinexcoinMixin, Coin):
     CHUNK_SIZE = 960
     PEERS = [
         'elex01-ams.turinex.eu s t',
+        'eu.minexpool.nl s t'
     ]
