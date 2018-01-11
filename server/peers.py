@@ -77,8 +77,7 @@ class PeerSession(JSONSession):
             self.failed = True
             self.log_error('server.peers.subscribe: {}'.format(error))
         else:
-            # Save for later analysis
-            self.remote_peers = result
+            # Save for later analysis            self.remote_peers = result
         self.close_if_done()
 
     def on_add_peer(self, result, error):
@@ -98,9 +97,9 @@ class PeerSession(JSONSession):
             elif self.peer.host.lower() in hosts:
                 self.peer.update_features(features)
             else:
-                self.bad = False
-                #self.log_warning('ignoring - not listed in host list {}'
-                #                 .format(hosts))
+                self.bad = True
+                self.log_warning('ignoring - not listed in host list {}'
+                                 .format(hosts))
         self.close_if_done()
 
     def on_height(self, result, error):
