@@ -77,7 +77,8 @@ class PeerSession(JSONSession):
             self.failed = True
             self.log_error('server.peers.subscribe: {}'.format(error))
         else:
-            # Save for later analysis            self.remote_peers = result
+            # Save for later analysis      
+            self.remote_peers = result
         self.close_if_done()
 
     def on_add_peer(self, result, error):
